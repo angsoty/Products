@@ -135,7 +135,7 @@
                         <span>Tables</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('products.product')}}">
+                    <a class="nav-link" href="{{route('products')}}">
                         <i class="fas fa-fw fa-table"></i>
                         <span>Products</span></a>
                 </li>
@@ -340,7 +340,7 @@
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                     
                                     <img class="img-profile rounded-circle"
-                                        src="img/brothea.jpg">
+                                        src="img/tii.png">
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
