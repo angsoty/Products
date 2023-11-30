@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/product', function () {
+    return view('product');
+})->middleware(['auth', 'verified'])->name('product');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -32,6 +35,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 Route::controller(ProductController::class)->prefix('products')->group(function () {
+    
     Route::get('', 'index')->name('products');
     Route::get('create', 'create')->name('products.create');
     Route::post('store', 'store')->name('products.store');
